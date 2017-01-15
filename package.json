@@ -1,9 +1,8 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
-  "private": true,
   "postinstall": "install-app-deps",
   "scripts": {
     "start": "electron .",
@@ -40,17 +39,24 @@
     "win": {
       "iconUrl": "https://i.relative.host/tdcp.ico"
     },
-    "publish": ["github"],
+    "publish": [
+      "github"
+    ],
     "files": [
       "!app${/*}"
-    ]
+    ],
+    "squirrelWindows": {
+      "iconUrl": "https://i.relative.host/tdcp.ico",
+      "msi": false,
+      "remoteReleases": true
+    }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/FNCxPro/tdesktopColorPicker.git"
   },
   "dependencies": {
-    "electron-auto-updater": "^1.0.0",
+    "electron-builder-squirrel-windows": "^11.4.0",
     "electron-debug": "^1.1.0",
     "robotjs": "^0.4.5"
   }
