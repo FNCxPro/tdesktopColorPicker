@@ -10,7 +10,7 @@
     "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
     "postinstall": "install-app-deps",
     "pack": "build --dir",
-    "dist-win32": "build --windows"
+    "dist-win32": "build --windows --publish always"
   },
   "author": "Relative <relative@outlook.ie> (https://relative.design)",
   "license": "ISC",
