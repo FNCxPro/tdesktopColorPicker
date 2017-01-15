@@ -1,8 +1,14 @@
 const electron = require('electron')
 const {app, BrowserWindow, ipcMain, globalShortcut} = electron
-
+const electronAutoUpdater = require('electron-auto-updater')
+const autoUpdater = electronAutoUpdater.autoUpdater
 const path = require('path')
 const url = require('url')
+
+autoUpdater.checkForUpdates()
+autoUpdater.on('update-downloaded', () => {
+  autoUpdater.quitAndInstall()
+})
 
 //require('electron-reload')(__dirname)
 require('electron-debug')({

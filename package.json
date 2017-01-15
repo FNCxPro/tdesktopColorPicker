@@ -1,6 +1,6 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
   "private": true,
@@ -40,6 +40,7 @@
     "win": {
       "iconUrl": "https://i.relative.host/tdcp.ico"
     },
+    "publish": ["github"],
     "files": [
       "!app${/*}"
     ]
@@ -49,6 +50,7 @@
     "url": "https://github.com/FNCxPro/tdesktopColorPicker.git"
   },
   "dependencies": {
+    "electron-auto-updater": "^1.0.0",
     "electron-debug": "^1.1.0",
     "robotjs": "^0.4.5"
   }
