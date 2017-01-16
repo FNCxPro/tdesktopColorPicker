@@ -1,6 +1,6 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
   "postinstall": "install-app-deps",
@@ -44,12 +44,7 @@
     ],
     "files": [
       "!app${/*}"
-    ],
-    "squirrelWindows": {
-      "iconUrl": "https://i.relative.host/tdcp.ico",
-      "msi": false,
-      "remoteReleases": true
-    }
+    ]
   },
   "repository": {
     "type": "git",
