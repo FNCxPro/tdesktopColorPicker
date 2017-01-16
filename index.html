@@ -9,5 +9,29 @@
   <body>
     <div id="content"></div>
     <script src="public/js/bundle.js"></script>
+    <script>
+      const package = require('./package.json')
+      const remote = require('electron').remote
+      const autoUpdater = remote.autoUpdater
+      //https://updates.relative.host/dist/squirreltest/
+      autoUpdater.on('update-available', () => {
+        console.log('update available')
+      })
+      autoUpdater.on('checking-for-update', () => {
+        console.log('checking-for-update')
+      })
+      autoUpdater.on('update-not-available', () => {
+        console.log('update-not-available')
+      })
+      autoUpdater.on('update-downloaded', (e) => {
+        console.log(e)
+        alert("Install?")
+          autoUpdater.quitAndInstall()
+      })
+      autoUpdater.setFeedURL('https://storage.googleapis.com/relapse-155801.appspot.com/dist/tdcp/')
+      autoUpdater.checkForUpdates()
+      window.autoUpdater = autoUpdater
+      document.title = `Telegram Desktop Color Picker - v${package.version}`
+    </script>
   </body>
 </html>

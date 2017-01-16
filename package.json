@@ -1,6 +1,6 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
   "postinstall": "install-app-deps",
@@ -9,9 +9,9 @@
     "watch": "watchify app/app.js -t babelify -o public/js/bundle.js --debug --verbose",
     "postinstall": "install-app-deps",
     "pack": "build --dir",
-    "dist-win32": "build --windows --publish always"
+    "dist-win32": "build --windows"
   },
-  "author": "Relative <relative@outlook.ie> (https://relative.design)",
+  "author": "Relative <relative@outlook.ie> (http://relative.design)",
   "license": "ISC",
   "devDependencies": {
     "axios": "^0.15.3",
@@ -32,11 +32,19 @@
     "react-bootstrap-table": "^2.9.1",
     "react-dom": "^15.4.2",
     "react-sound": "^0.5.2",
-    "soundmanager2": "^2.97.20150601-a"
+    "soundmanager2": "^2.97.20150601-a",
+    "electron-builder-squirrel-windows": "^11.4.0"
   },
   "build": {
     "appId": "yt.relative.tdesktopColorPicker",
+    "productName": "Telegram Desktop Color Picker",
     "win": {
+      "iconUrl": "https://i.relative.host/tdcp.ico",
+      "certificateFile": "./certs/code.pfx",
+      "target": "squirrel"
+    },
+    "squirrelWindows": {
+      "remoteReleases": "https://storage.googleapis.com/relapse-155801.appspot.com/dist/tdcp/",
       "iconUrl": "https://i.relative.host/tdcp.ico"
     },
     "publish": [
@@ -51,7 +59,6 @@
     "url": "https://github.com/FNCxPro/tdesktopColorPicker.git"
   },
   "dependencies": {
-    "electron-builder-squirrel-windows": "^11.4.0",
     "electron-debug": "^1.1.0",
     "robotjs": "^0.4.5"
   }
