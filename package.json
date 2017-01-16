@@ -1,6 +1,6 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
   "postinstall": "install-app-deps",
@@ -60,6 +60,7 @@
   },
   "dependencies": {
     "electron-debug": "^1.1.0",
+    "electron-squirrel-startup": "^1.0.0",
     "robotjs": "^0.4.5"
   }
 }

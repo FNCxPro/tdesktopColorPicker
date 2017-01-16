@@ -8,6 +8,9 @@ const url = require('url')
 require('electron-debug')({
   enabled: true
 })
+
+if(require('electron-squirrel-startup')) return
+
 let mainWindow
 function createWindow() {
   mainWindow = new BrowserWindow({width: 800, height: 600})
