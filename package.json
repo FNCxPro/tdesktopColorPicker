@@ -1,6 +1,6 @@
 {
   "name": "tdesktopcolorpicker",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A color picker for tdesktop to get properties!",
   "main": "index.js",
   "postinstall": "install-app-deps",
